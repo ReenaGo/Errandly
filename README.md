@@ -18,6 +18,7 @@ Javascript, Code Editor
 * [Firebase Realtime Database](https://firebase.google.com/products/realtime-database/) - The database used
 * [Google Maps](https://developers.google.com/maps/documentation/javascript/tutorial) - API to display maps
 * [Google Geocode](https://developers.google.com/maps/documentation/geocoding/start) - API to display map pins
+* [Twilio SendGrid API] (https://sendgrid.com/docs/for-developers/sending-email/api-getting-started/)- API to send push notification to poster when user assepts task
 
 ## Authors
 
