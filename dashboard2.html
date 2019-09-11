@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+                <title>Errandly Find or Post a Job!</title>
+                <link
+                  rel="stylesheet"
+                  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+                  crossorigin="anonymous"
+                />
+                <link rel="stylesheet" href="css/dashboard2.css" />
+                <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+                <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+                <script defer src="https://www.gstatic.com/firebasejs/6.2.4/firebase-firestore.js"></script>
+                <script sync defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+              </head>
+<body>
+    <div id=container>
+        <!-- navbar -->
+        <div id="nav">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                <img src="./images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Errandly
+                </a>
+                <div id="login-display-name"></div>
+                <div class="col-3-sm">
+                    <button type="button" class="btn btn-dark mr-3" data-toggle="modal" onclick="logout()" data-target="#signOut">Sign Out</button>
+                </div>
+            </nav>
+        </div>
+        <!-- buttons -->
+        <div id="button-row">
+            <div id="select-button">
+                <button
+                class="btn btn-dark dropdown-toggle mr-1"
+                type="button"
+                id="dropdownMenu2"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >
+                Select Task Type
+                </button>
+                <div class="dropdown-menu">
+                    <button class="dropdown-item" type="button" id="allTasks">All Tasks</button>
+                    <button class="dropdown-item" type="button" id="washDishes">Wash Dishes</button>
+                    <button class="dropdown-item" type="button" id="mowLawn">Mow Lawn</button>
+                    <button class="dropdown-item" type="button" id="walkDog">Walk Dog</button>
+                </div>
+            </div>
+            <div class="col-3-sm">
+            <button type="button" class="btn btn-dark mr-1" id="myTasks">My Tasks!</button>
+            </div>
+            <div class="col-3-sm">
+            <button type="button" class="btn btn-dark mr-3" data-toggle="modal" data-target="#newTask">New Task!</button>
+            </div>
+        </div>
+        <br>
+        <!-- page content -->
+        <div id="page-content">
+            <!-- cards -->
+            <div id="cards">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="..." class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body" id="dbOutput"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- map -->
+            <div id="map">
+
+            </div>
+        </div>
+    </Div>
+ 
+
+
+
+
+
+
+
+
+
+    <script src="js/dashboard.js"></script>
+    <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXXdhfcL4wudAooa22SPESVm_PPbKRgqE&callback=initMap"
+    ></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+    ></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+#button-row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.11);
+    border-bottom-width: 1px;
+}
+
+button {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#nav {
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.11);
+    border-bottom-width: 1px 
+
+}
