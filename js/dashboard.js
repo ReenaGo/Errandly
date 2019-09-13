@@ -158,21 +158,24 @@ function geocode(address, city) {
 }
 
 function renderFunction(querySnapshot) {
-  let renderHTML = `<ul class="list-group">`;
+  let renderHTML;
   deleteMarkers();
   querySnapshot.forEach(function(doc) {
     // doc.data() is never undefined for query doc snapshots
     let recordDetails = doc.data();
-    renderHTML += `
-    <li class="list-group-item"><strong>Username</strong>: ${recordDetails.username}</li>
-    <li class="list-group-item"><strong>City</strong>: ${recordDetails.city}</li>
-    <li class="list-group-item"><strong>Task</strong>: ${recordDetails.task}</li>
-    <li class="list-group-item"><strong>Task Date</strong>: ${recordDetails.taskDate}</li>
-    <li class="list-group-item"><strong>Task Description</strong>: ${recordDetails.taskDescription}</li>
-    <button class="btn btn-primary" id="acceptTask" onClick="acceptTask('${doc.id}')">Accept Task!</button>
-    <br>
-  `;
-
+    renderHTML = `<div id="outer-task-container">
+                    <div id="task-image"><img id="task-img" src="./images/${recordDetails.task}2.jpeg"/></div>
+                            <div id="task-details"> <div id="listdiv"><ul>
+                                  <li class="list-group"><strong>Name</strong>: ${recordDetails.username}</li>
+                                  <li class="list-group"><strong>City</strong>: ${recordDetails.city}</li>
+                                  <li class="list-group"><strong>Task</strong>: ${recordDetails.task}</li>
+                                  <li class="list-group"><strong>Date</strong>: ${recordDetails.taskDate}</li>
+                                  <li class="list-group"><strong>Description</strong>: ${recordDetails.taskDescription}</li>
+                                </ul></div>
+                                <div id="buttondiv"><button class="btn btn-primary" id="acceptTask" onClick="acceptTask('${doc.id}')">Accept Task!</button>
+                                </div></div>
+                            </div> 
+                            <br>`;
     let props = {
       coords: { lat: recordDetails.lat, lng: recordDetails.lng },
       iconImage: "./images/" + recordDetails.task + ".png",
@@ -187,20 +190,24 @@ function renderFunction(querySnapshot) {
 }
 
 function renderFunction_noButton(querySnapshot) {
-  let renderHTML = `<ul class="list-group">`;
+  let renderHTML;
   deleteMarkers();
   querySnapshot.forEach(function(doc) {
     // doc.data() is never undefined for query doc snapshots
     let recordDetails = doc.data();
-    renderHTML += `
-    <li class="list-group-item"><strong>Username</strong>: ${recordDetails.username}</li>
-    <li class="list-group-item"><strong>City</strong>: ${recordDetails.city}</li>
-    <li class="list-group-item"><strong>Task</strong>: ${recordDetails.task}</li>
-    <li class="list-group-item"><strong>Task Date</strong>: ${recordDetails.taskDate}</li>
-    <li class="list-group-item"><strong>Task Description</strong>: ${recordDetails.taskDescription}</li>
-    <button class="btn btn-primary" id="cancelTask" onClick="cancelTask('${doc.id}')">Cancel Task!</button>
-    <br>
-  `;
+    renderHTML = `<div id="outer-task-container">
+    <div id="task-image"><img id="task-img" src="./images/${recordDetails.task}2.jpeg"/></div>
+            <div id="task-details"> <div id="listdiv"><ul>
+                  <li class="list-group"><strong>Name</strong>: ${recordDetails.username}</li>
+                  <li class="list-group"><strong>City</strong>: ${recordDetails.city}</li>
+                  <li class="list-group"><strong>Task</strong>: ${recordDetails.task}</li>
+                  <li class="list-group"><strong>Date</strong>: ${recordDetails.taskDate}</li>
+                  <li class="list-group"><strong>Description</strong>: ${recordDetails.taskDescription}</li>
+                </ul></div>
+                <div id="buttondiv"><button class="btn btn-primary" id="acceptTask" onClick="acceptTask('${doc.id}')">Accept Task!</button>
+                </div></div>
+            </div> 
+            <br>`;
 
     let props = {
       coords: { lat: recordDetails.lat, lng: recordDetails.lng },
