@@ -158,12 +158,12 @@ function geocode(address, city) {
 }
 
 function renderFunction(querySnapshot) {
-  let renderHTML;
+  let renderHTML = "";
   deleteMarkers();
   querySnapshot.forEach(function(doc) {
     // doc.data() is never undefined for query doc snapshots
     let recordDetails = doc.data();
-    renderHTML = `<div id="outer-task-container">
+    renderHTML += `<div id="outer-task-container">
                     <div id="task-image"><img id="task-img" src="./images/${recordDetails.task}2.jpeg"/></div>
                             <div id="task-details"> <div id="listdiv"><ul>
                                   <li class="list-group"><strong>Name</strong>: ${recordDetails.username}</li>
@@ -172,7 +172,7 @@ function renderFunction(querySnapshot) {
                                   <li class="list-group"><strong>Date</strong>: ${recordDetails.taskDate}</li>
                                   <li class="list-group"><strong>Description</strong>: ${recordDetails.taskDescription}</li>
                                 </ul></div>
-                                <div id="buttondiv"><button class="btn btn-primary" id="acceptTask" onClick="acceptTask('${doc.id}')">Accept Task!</button>
+                                <div id="buttondiv"><button class="btn" id="acceptTask" onClick="acceptTask('${doc.id}')">Accept Task!</button>
                                 </div></div>
                             </div> 
                             <br>`;
@@ -190,12 +190,12 @@ function renderFunction(querySnapshot) {
 }
 
 function renderFunction_noButton(querySnapshot) {
-  let renderHTML;
+  let renderHTML = "";
   deleteMarkers();
   querySnapshot.forEach(function(doc) {
     // doc.data() is never undefined for query doc snapshots
     let recordDetails = doc.data();
-    renderHTML = `<div id="outer-task-container">
+    renderHTML += `<div id="outer-task-container">
     <div id="task-image"><img id="task-img" src="./images/${recordDetails.task}2.jpeg"/></div>
             <div id="task-details"> <div id="listdiv"><ul>
                   <li class="list-group"><strong>Name</strong>: ${recordDetails.username}</li>
@@ -204,7 +204,7 @@ function renderFunction_noButton(querySnapshot) {
                   <li class="list-group"><strong>Date</strong>: ${recordDetails.taskDate}</li>
                   <li class="list-group"><strong>Description</strong>: ${recordDetails.taskDescription}</li>
                 </ul></div>
-                <div id="buttondiv"><button class="btn btn-primary" id="acceptTask" onClick="acceptTask('${doc.id}')">Accept Task!</button>
+                <div id="buttondiv"><button class="btn" id="acceptTask" onClick="acceptTask('${doc.id}')">Accept Task!</button>
                 </div></div>
             </div> 
             <br>`;

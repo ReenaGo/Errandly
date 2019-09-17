@@ -2,6 +2,7 @@ body {
     background-image: url('../images/backgroundlogin.jpeg'); 
     background-position:center;
     background-size:cover;
+    background-image: 
     
     -webkit-font-smoothing: antialiased;
     font: normal 14px Roboto,arial,sans-serif;
@@ -16,51 +17,7 @@ body {
       opacity: 1; /* Firefox */
       font-size:18px!important;
   }
-  /* .form-login {
-      background-color: rgba(0,0,0,0.55);
-      padding-top: 10px;
-      padding-bottom: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
-      border-radius: 15px;
-      border-color:#d2d2d2;
-      border-width: 5px;
-      color:white;
-      box-shadow:0 1px 0 #cfcfcf;
-  }
-  .form-control{
-      background:transparent!important;
-      color:white!important;
-      font-size: 18px!important;
-  }
-  h1{
-      color:white!important;
-  }
-  h4 { 
-   border:0 solid #fff; 
-   border-bottom-width:1px;
-   padding-bottom:10px;
-   text-align: center;
-  }
   
-  .form-control {
-      border-radius: 10px;
-  }
-  .text-white{
-      color: white!important;
-  }
-  .wrapper {
-      text-align: center;
-  }
-  .footer p{
-      font-size: 18px;
-  }
-  .text-black{
-    color: black!important;
-} */
-
-
-
 img{
     height: 75px;
     width: 75px;
@@ -80,13 +37,12 @@ img{
     flex-basis: 1;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 0px
-    
+    padding-top: 0px;    
   }
   
-  .logo {
-    font-style: oblique;
-    font-family: fantasy;
+  .logo H1 {
+    font-style: Normal;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 25px;
     text-align: center;
   
@@ -95,9 +51,22 @@ img{
   
   .banner-text h5 {
     font-style: normal;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    padding-left: 400px
   
   }
+
+
+  #layer {
+    background-color: rgba(243, 234, 234, 0.473);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
   
 
   
