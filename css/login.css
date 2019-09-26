@@ -2,7 +2,6 @@ body {
     background-image: url('../images/backgroundlogin.jpeg'); 
     background-position:center;
     background-size:cover;
-    background-image: 
     
     -webkit-font-smoothing: antialiased;
     font: normal 14px Roboto,arial,sans-serif;
@@ -17,12 +16,7 @@ body {
       opacity: 1; /* Firefox */
       font-size:18px!important;
   }
-  
-img{
-    height: 75px;
-    width: 75px;
-    
-  }
+
 
   .image {
     margin: 0 auto;
