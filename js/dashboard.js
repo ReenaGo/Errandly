@@ -426,7 +426,7 @@ window.addEventListener("DOMContentLoaded", event => {
     } else {
       // No user is signed in. Then redirect them to log-in page.
       console.log("NOT signed in");
-      window.location.href = "login.html";
+      window.location.href = "index.html";
     }
   });
 
